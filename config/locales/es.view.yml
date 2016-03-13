@@ -1,0 +1,8 @@
+es:
+  images:
+    index:
+      title: 'Imágenes'
+      new_link: 'Nueva imágen'
+
+    new:
+      title: "Nueva %{model}"

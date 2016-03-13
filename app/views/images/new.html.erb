@@ -1,0 +1,17 @@
+<h1> <%= t('.title', model: 'imágen')%></h1>
+
+<%= form_for @image do |form|%>
+<div class='field'>
+  <%= form.label :name %>
+  <%= form.text_field :name%>
+</div>
+<div class='field'>
+  <%= form.label :description %>
+  <%= form.text_area :description%>
+</div>
+<div class='field'>
+  <%= form.label :tags %>
+  <%= form.text_field :tags%>
+</div>
+
+<%end%>

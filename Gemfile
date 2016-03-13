@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18.4'
-
+# Web server for Rails
 gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -37,6 +37,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # Console rails
   gem 'pry-rails'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -46,4 +47,9 @@ end
 
 group :test do
   gem 'minitest-rails'
+end
+
+group :development do
+  gem 'rubocop', require: false
+  gem 'ruby-beautify', require: false
 end
