@@ -1,10 +1,13 @@
 <% model_name = @image.class.model_name.human%>
 <h1> <%= t('.title', model: model_name)%></h1>
 
-<%= form_for @image do |form|%>
+<%= form_for @image, builder: CustomFormBuilder do |form|%>
+<%= form.form_error%>
+
 <div class='field'>
   <%= form.label :name %>
   <%= form.text_field :name%>
+  <%= form.field_error :name %>
 </div>
 <div class='field'>
   <%= form.label :description %>

@@ -1,5 +1,7 @@
 class Image < ActiveRecord::Base
   enum category: %w(portrait landscape city\ exploration nature animal)
+
+  validates :name, presence: true
   def tags_text
     self.tags.join(', ')
   end
