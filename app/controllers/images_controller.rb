@@ -11,6 +11,7 @@ class ImagesController < ApplicationController
 
   def create
     @image = Image.new secure_params
+    @image.identity = current_identity
     if @image.save
       return redirect_to images_path, notice: t('.created', model: @image.class.model_name.human)
     else

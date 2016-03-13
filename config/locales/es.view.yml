@@ -15,3 +15,18 @@ es:
         error: 'Ha ocurrido un erro al intentar crear la %{model}'
     create:
       created: 'La %{model} ha sido creada.'
+  sessions:
+    destroy:
+      logged_out: 'Sesión Cerrada'
+    create:
+      logged_in: 'Sesión Iniciada'
+    new:
+      log_in: 'Ingresar'
+  layouts:
+    application:
+      sign_up: 'Crear Cuenta'
+      log_in: 'Iniciar Sesión'
+      log_out: 'Cerrar Sesión'
+  identities:
+    new:
+      create: 'Registrarme'

@@ -3,4 +3,6 @@ class Identity < ActiveRecord::Base
 
   validates :email, presence: true, uniqueness: true
   validates :password_confirmation, presence: true, if: -> r { r.password.present? }
+
+  has_many :images
 end

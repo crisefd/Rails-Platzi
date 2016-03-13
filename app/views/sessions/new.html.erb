@@ -1,15 +1,12 @@
-<%= form_for @identity, url: sessions_path do |form| %>
+<%= form_for @identity,  html: { class: "pure-form" }, url: sessions_path do |form| %>
   <%- if warden_message %>
     <div class='alert'><%= warden_message %></div>
   <% end %>
-
-  <p>
-    <%= form.label :email %><br />
+  <fieldset>
+    <%= form.label :email %>
     <%= form.text_field :email %>
-  </p>
-  <p>
-    <%= form.label :password %><br />
+    <%= form.label :password %>
     <%= form.password_field :password %>
-  </p>
-  <p class='button'><%= form.submit t('.log_in') %></p>
+    <%= form.submit t('.log_in'), class: "pure-button pure-button-primary" %>
+  </fieldset>
 <% end %>
